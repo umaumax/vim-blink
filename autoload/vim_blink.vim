@@ -65,11 +65,11 @@ function! s:BlinkStop(timer_id)
   endif
 endfunction
 
-augroup vim_blink_die_blinkmatchen
-  autocmd!
-  autocmd CursorMoved * call s:BlinkStop(0)
-  autocmd InsertEnter * call s:BlinkStop(0)
-augroup END
+" augroup vim_blink_die_blinkmatchen
+" autocmd!
+" autocmd CursorMoved * call s:BlinkStop(0)
+" autocmd InsertEnter * call s:BlinkStop(0)
+" augroup END
 
 function! vim_blink#blink(pattern, ...)
   let s:blink_match_group_name = get(a:, 1, g:vim_blink_blink_match_gruop)
